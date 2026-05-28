@@ -101,3 +101,6 @@ You need to know that the word before the exclamation mark and after the quotati
 1.0
 
 Initial version. This version contains the default settings for the Monitors and Rules that are enabled for a computer instance or hosted by the computer instance (e.g. for Logical Disks, Network Interfaces, etc.)
+
+# Contact
+If you find any issues with the script please send the details to the following email: scom.alf at proton.me
