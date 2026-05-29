@@ -13,8 +13,8 @@ This version extracts the monitoring details using the factory default settings,
 - Instance DisplayName ⟶ The DisplayName property of the instance
 - Monitor Target DisplayName ⟶ The DisplayName property of the Target of the Monitor
 - Generates Alert ⟶ The Monitor generates an Alert (True or False)
-- Alert Severity ⟶ If the Monitor generates an Alert then it has this Severity value (Error, ???, ???)
-- Alert Priority ⟶ If the Monitor generates an Alert then it has this Priority value (???, Normal, ???)
+- Alert Severity ⟶ If the Monitor generates an Alert then it has this Severity value (Error, Warning, Information, MatchMonitorHealth)
+- Alert Priority ⟶ If the Monitor generates an Alert then it has this Priority value (High, Normal, Low)
 - Alert Name ⟶ If the Monitor generates an Alert then this is the Name of the Alert
 - Alert Description ⟶ If the Monitor generates an Alert then this is the Description of the Alert (with a text, or a parameter from SCOM)
 - Health State #1 ⟶ The first Health State definition, as it is recorder in the Management Pack. First its name, then its meaning (e.g. TimerEventRaised -> Success means that in the Management Pack the name of the Health State is TimerEventRaised, and it means a Success Health State)
@@ -32,8 +32,8 @@ This version extracts the monitoring details using the factory default settings,
 - Rule Target DisplayName ⟶ The DisplayName property of the Target of the Rule
 - Rule Category ⟶ The Category property of the Rule (should be Alert, EventCollection, PerformanceCollection, System, etc.)
 - Generates Alert ⟶ The Rule generates an Alert (True or False)
-- Alert Severity ⟶ If the Rule generates an Alert then it has this Severity value (Error, ???, ???)
-- Alert Priority ⟶ If the Rule generates an Alert then it has this Priority value (High, Normal, ???)
+- Alert Severity ⟶ If the Rule generates an Alert then it has this Severity value (Error, Warning, Information, MatchMonitorHealth)
+- Alert Priority ⟶ If the Rule generates an Alert then it has this Priority value (High, Normal, Low)
 - Alert Name ⟶ If the Rule generates an Alert then this is the Name of the Alert
 - Alert Description ⟶ If the Rule generates an Alert then this is the Description of the Alert (with a text, or a parameter from SCOM)
 - Rule Effective Configuration ⟶ Variable, detailed information of the Rule configuration
