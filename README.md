@@ -32,7 +32,7 @@ This version extracts the monitoring details using the factory default settings,
 - Rule Target DisplayName ⟶ The DisplayName property of the Target of the Rule
 - Rule Category ⟶ The Category property of the Rule (should be Alert, EventCollection, PerformanceCollection, System, etc.)
 - Generates Alert ⟶ The Rule generates an Alert (True or False)
-- Alert Severity ⟶ If the Rule generates an Alert then it has this Severity value (Error, Warning, Information, MatchMonitorHealth)
+- Alert Severity ⟶ If the Rule generates an Alert then it has this Severity value (Error, Warning, Information)
 - Alert Priority ⟶ If the Rule generates an Alert then it has this Priority value (High, Normal, Low)
 - Alert Name ⟶ If the Rule generates an Alert then this is the Name of the Alert
 - Alert Description ⟶ If the Rule generates an Alert then this is the Description of the Alert (with a text, or a parameter from SCOM)
