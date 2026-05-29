@@ -1,3 +1,7 @@
+# WARNING
+The EXE file is not accessible now.
+After an update I will upload it again.
+
 # Extract SCOM monitoring details
 A PowerShell script - translated to an EXE file - that extracts SCOM monitoring details - all running and enabled Management Pack monitoring objects - covering a monitored server chosen by the customer. You can run this application in a CMD as well as in a simple PowerShell window.
 The only requirement is that you need to run this script on a SCOM Management Server.
