@@ -2,10 +2,33 @@
 A PowerShell script - translated to an EXE file - that extracts SCOM monitoring details - all running and enabled Management Pack monitoring objects - covering a monitored server chosen by the customer. You can run this application in a CMD as well as in a simple PowerShell window.
 The only requirement is that you need to run this script on a SCOM Management Server.
 
-### Remark
-This version extracts the monitoring details using the factory default settings, so if an override is defined for a Monitor or Rule then that is not shown. Later I will update the script to contain such information some way.
+The extract file contains not only the default settings for the Monitors and Rules but also contains notes in case an override is defined for any of the properties. Nevertheless be careful when analyzing overrides as there is an override precedence.
+
+Recommended article:
+
+https://learn.microsoft.com/en-us/system-center/scom/manage-mp-overview-override-targets?view=sc-om-2025
+
+An override is shown as the following, for example for the "Send Queue % Used" Monitor:
+
+>**Enabled                         : true -> Overridden, current value is "false" in "System Center Core Monitoring"**\
+>Monitor DisplayName             : Send Queue % Used
+
+Or for a Rule propery for "Microsoft System Center Advisor Monitoring Server Opt-In/Out Rule" Rule:
+
+>Rule DisplayName                : Microsoft System Center Advisor Monitoring Server Opt-In/Out Rule\
+>Rule Name                       : Microsoft.SystemCenter.Advisor.Monitoring.ServerOptInOutRule\
+>Rule Description                : \
+>MP Name [MP DisplayName]        : Microsoft.SystemCenter.Advisor.Internal [Microsoft System Center Advisor Internal]\
+>Instance DisplayName            : AD.alf.local\
+>Rule Target DisplayName         : Health Service\
+>Rule Category                   : Custom\
+>Generates Alert                 : False\
+>Rule Effective Configuration    : \
+>    **EnableConnector = false -> Overridden, current value is "true" in "Microsoft System Center Advisor Internal"**\
+>    ManagementGroupId = '$Target/ManagementGroup/Id$'\
 
 ## The Monitor extract has the following data:
+- Enabled ⟶ This is an optional entry displayed only in case there is an override defined for the Enabled property
 - Monitor DisplayName ⟶ The DisplayName property of the Monitor
 - Monitor Name ⟶ The internal Name property of the Monitor (as you can find it in a Management Pack)
 - Monitor Description ⟶ The Description field of the Monitor (should be empty)
@@ -24,6 +47,7 @@ This version extracts the monitoring details using the factory default settings,
 - Monitor Effective Configuration ⟶ Variable, detailed information of the Monitor configuration
 
 ## The Rule extract has the following data:
+- Enabled ⟶ This is an optional entry displayed only in case there is an override defined for the Enabled property
 - Rule DisplayName ⟶ The DisplayName property of the Rule
 - Rule Name ⟶ The internal Name property of the Rule (as you can find it in a Management Pack)
 - Rule Description ⟶ The Description field of the Monitor (should be empty)
@@ -98,9 +122,11 @@ You need to know that the word before the exclamation mark and after the quotati
 - AgentVersion ⟶ This is the current version of a SCOM Agent running on the computer
 
 # Version information
-1.0
-
+### 1.0
 Initial version. This version contains the default settings for the Monitors and Rules that are enabled for a computer instance or hosted by the computer instance (e.g. for Logical Disks, Network Interfaces, etc.)
+
+### 1.1
+Updated version that contains not only the extract of Monitors and Rules but also the overrides defined for a Monitor or Rule.
 
 # Contact
 If you find any issues with the script please send the details to the following email: scom.alf at proton.me
