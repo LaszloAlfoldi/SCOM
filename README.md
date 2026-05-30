@@ -122,11 +122,10 @@ You need to know that the word before the exclamation mark and after the quotati
 - AgentVersion ⟶ This is the current version of a SCOM Agent running on the computer
 
 # Version information
-### 1.0
-Initial version. This version contains the default settings for the Monitors and Rules that are enabled for a computer instance or hosted by the computer instance (e.g. for Logical Disks, Network Interfaces, etc.)
-
 ### 1.1
 Updated version that contains not only the extract of Monitors and Rules but also the overrides defined for a Monitor or Rule.
+### 1.0
+Initial version. This version contains the default settings for the Monitors and Rules that are enabled for a computer instance or hosted by the computer instance (e.g. for Logical Disks, Network Interfaces, etc.)
 
 # Contact
 If you find any issues with the script please send the details to the following email: scom.alf at proton.me
