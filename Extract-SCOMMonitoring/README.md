@@ -1,5 +1,9 @@
 # Extract SCOM monitoring details
-A PowerShell script - translated to an EXE file - that extracts SCOM monitoring details - all running and enabled Management Pack monitoring objects - covering a monitored server chosen by the customer. You can run this application in a CMD as well as in a simple PowerShell window.
+A PowerShell script - translated to an EXE file - that extracts SCOM monitoring details - all running and enabled Management Pack monitoring objects - covering a monitored server chosen by the customer.
+
+The aim of this application is to provide a text output that can be useful for a non-SCOM specific administrator as well as SCOM administrator, so they can discuss easily whether a given monitoring is required or not on the SCOM infrastructure.
+
+You can run this application in a CMD as well as in a simple PowerShell window.
 The only requirement is that you need to run this script on a SCOM Management Server.
 
 The extract file contains not only the default settings for the Monitors and Rules but also contains notes in case an override is defined for any of the properties. Nevertheless be careful when analyzing overrides as there is an override precedence.
